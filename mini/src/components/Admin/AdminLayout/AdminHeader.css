@@ -1,0 +1,28 @@
+.navbar{
+    background-color:#344D67;
+    width: 100%;
+    color: white;
+    
+}
+.navbar button{
+    background-color:#EEF1FF;
+    margin-right: 1rem;
+}
+.navbar-brand{
+    padding-left:0.5rem ;
+    width: 7rem;
+}
+.Avatar{
+    padding-right:2rem ;
+    width: 4rem; 
+}
+.nav-link{
+    padding-left:5rem ;
+
+}
+
+.collapse{
+    padding-left:10rem ;
+
+}
+
