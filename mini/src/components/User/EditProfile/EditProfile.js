@@ -1,3 +1,4 @@
+// require('dotenv').config()
 import React, { useEffect, useState } from 'react'
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,8 @@ import "./EditProfile.css"
 import App from '../../../App';
 
 
-let cloudAPI = "dyujj6zhw"
+let cloudAPI = process.env.REACT_APP_CLOUD_API
+
 
 function EditProfile() {
     const [image, setImage] = useState("")
