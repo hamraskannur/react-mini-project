@@ -9,7 +9,7 @@ import App from '../../../App';
 
 
 let cloudAPI = process.env.REACT_APP_CLOUD_API
-
+let vicode=process.env.REACT_APP_CLOUD_code
 
 function EditProfile() {
     const [image, setImage] = useState("")
@@ -32,7 +32,7 @@ function EditProfile() {
     const handleUpdateProfile = () => {
         const formData = new FormData();
         formData.append('file', image);
-        formData.append('upload_preset', 'vkiouzpq');
+        formData.append('upload_preset',vicode);
         let imageUrl = null
         Axios.post(`https://api.cloudinary.com/v1_1/${cloudAPI}/image/upload`, formData).then(response => {
             if (response) {
