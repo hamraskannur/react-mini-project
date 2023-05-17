@@ -37,7 +37,6 @@ function EditProfile() {
         Axios.post(`https://api.cloudinary.com/v1_1/${cloudAPI}/image/upload`, formData).then(response => {
             if (response) {
                 imageUrl = response?.data?.secure_url
-                console.log(imageUrl);
                 Axios.post(`${userAPI}editProfilePhoto`, { image: imageUrl }, { withCredentials: true }).then((res) => {
                     if (res.data.changed) {
                         navigate('/myAccount')
